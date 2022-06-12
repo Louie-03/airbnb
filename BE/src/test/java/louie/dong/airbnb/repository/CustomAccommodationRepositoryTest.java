@@ -1,4 +1,4 @@
-package louie.dong.airbnb.web.accommodation;
+package louie.dong.airbnb.repository;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Import;
 @Import(JpaQueryTestConfig.class)
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @DataJpaTest
-class CustomAccommodationRepositoryImplTest {
+class CustomAccommodationRepositoryTest {
 
     @Autowired
     AccommodationRepository accommodationRepository;

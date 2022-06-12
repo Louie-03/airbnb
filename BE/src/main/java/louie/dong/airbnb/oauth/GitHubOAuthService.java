@@ -2,6 +2,7 @@ package louie.dong.airbnb.oauth;
 
 import static louie.dong.airbnb.oauth.GithubOAuthUtils.*;
 
+import louie.dong.airbnb.domain.Member;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;

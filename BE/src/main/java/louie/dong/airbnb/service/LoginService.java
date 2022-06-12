@@ -1,8 +1,8 @@
-package louie.dong.airbnb.login;
+package louie.dong.airbnb.service;
 
 import lombok.RequiredArgsConstructor;
-import louie.dong.airbnb.member.MemberRepository;
-import louie.dong.airbnb.oauth.Member;
+import louie.dong.airbnb.repository.MemberRepository;
+import louie.dong.airbnb.domain.Member;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor

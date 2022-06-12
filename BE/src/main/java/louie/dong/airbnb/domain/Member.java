@@ -1,4 +1,4 @@
-package louie.dong.airbnb.oauth;
+package louie.dong.airbnb.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

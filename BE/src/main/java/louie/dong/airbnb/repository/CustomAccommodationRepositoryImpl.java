@@ -1,8 +1,8 @@
 package louie.dong.airbnb.repository;
 
-import static louie.dong.airbnb.web.accommodation.QAccommodation.*;
-import static louie.dong.airbnb.web.accommodation.QAccommodationImage.*;
-import static louie.dong.airbnb.web.book.QBook.*;
+import static louie.dong.airbnb.domain.QAccommodation.*;
+import static louie.dong.airbnb.domain.QAccommodationImage.*;
+import static louie.dong.airbnb.domain.QBook.*;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;

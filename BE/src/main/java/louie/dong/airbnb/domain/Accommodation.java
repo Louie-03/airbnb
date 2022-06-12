@@ -45,7 +45,6 @@ public class Accommodation {
 	@Column(name = "accommodation_description")
 	private String description;
 
-	@Column(columnDefinition = "point")
 	private Point point;
 
 	private String country;
