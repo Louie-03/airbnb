@@ -1,6 +1,0 @@
-cloud.aws:
-  stack.auto: false
-  region.static: ap-northeast-2
-  credentials.access-key: AKIATFD7EYXE6FQFGHIH
-  credentials.secret-key: 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
-  s3.bucket: https://s3.console.aws.amazon.com/s3/buckets/issue-tracker-test
