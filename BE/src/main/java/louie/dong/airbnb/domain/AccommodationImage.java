@@ -2,8 +2,6 @@ package louie.dong.airbnb.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +24,5 @@ public class AccommodationImage {
 	@Column(length = 1000)
 	private String imageUrl;
 
-	@Enumerated(EnumType.STRING)
 	private boolean isThumbnailImage;
 }

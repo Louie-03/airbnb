@@ -1,16 +1,15 @@
 package louie.dong.airbnb.repository;
 
-import static louie.dong.airbnb.domain.QAccommodation.*;
-import static louie.dong.airbnb.domain.QAccommodationImage.*;
-import static louie.dong.airbnb.domain.QBook.*;
+import static louie.dong.airbnb.domain.QAccommodation.accommodation;
+import static louie.dong.airbnb.domain.QAccommodationImage.accommodationImage;
+import static louie.dong.airbnb.domain.QBook.book;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import louie.dong.airbnb.domain.ImageType;
-import louie.dong.airbnb.web.accommodation.dto.AccommodationSearchRequest;
 import louie.dong.airbnb.domain.Accommodation;
+import louie.dong.airbnb.web.accommodation.dto.AccommodationSearchRequest;
 
 @RequiredArgsConstructor
 public class CustomAccommodationRepositoryImpl implements CustomAccommodationRepository {
@@ -23,7 +22,7 @@ public class CustomAccommodationRepositoryImpl implements CustomAccommodationRep
         return queryFactory
             .selectFrom(accommodation).distinct()
             .leftJoin(accommodation.accommodationImages, accommodationImage)
-                .on(accommodationImage.imageType.eq(ImageType.MAIN))
+                .on(accommodationImage.isThumbnailImage.eq(true))
             .leftJoin(accommodation.wishlist).fetchJoin()
             .leftJoin(accommodation.books, book).on(book.isCanceled.eq(false))
             .where(
