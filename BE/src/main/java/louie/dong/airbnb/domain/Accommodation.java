@@ -59,20 +59,10 @@ public class Accommodation {
 	private int serviceFee;
 	private int accommodationFee;
 
-	public Accommodation(RoomInformation roomInformation, int price, double rating, int reviewCount,
-		int cleaningFee, int serviceFee, int accommodationFee, Point point) {
-		this.roomInformation = roomInformation;
-		this.price = price;
-		this.rating = rating;
-		this.reviewCount = reviewCount;
-		this.cleaningFee = cleaningFee;
-		this.serviceFee = serviceFee;
-		this.accommodationFee = accommodationFee;
-		this.point = point;
-	}
-
-	public boolean notExistsImage() {
-		return accommodationImages.isEmpty();
+	public void validAccommodation() {
+		if (notExistsImage()) {
+			throw new IllegalStateException("숙소의 메인 이미지가 존재하지 않습니다");
+		}
 	}
 
 	public boolean existsWish() {
@@ -98,5 +88,9 @@ public class Accommodation {
 	public int getFinalPrice(int totalPrice, int discountPrice) {
 		return totalPrice - discountPrice + cleaningFee
 			+ serviceFee + accommodationFee;
+	}
+
+	private boolean notExistsImage() {
+		return accommodationImages.isEmpty();
 	}
 }

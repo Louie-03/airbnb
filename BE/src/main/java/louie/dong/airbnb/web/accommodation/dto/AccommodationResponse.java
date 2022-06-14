@@ -31,17 +31,4 @@ public class AccommodationResponse {
 		this.imageUrl = accommodation.getAccommodationImages().get(0).getImageUrl();
 	}
 
-	public AccommodationResponse(Long id, String name, String imageUrl, double rating,
-		int reviewCount, int price, int totalPrice, boolean existsWish, Point point) {
-		this.id = id;
-		this.name = name;
-		this.imageUrl = imageUrl;
-		this.rating = rating;
-		this.reviewCount = reviewCount;
-		this.price = price;
-		this.totalPrice = totalPrice;
-		this.existsWish = existsWish;
-		this.latitude = point.getY();
-		this.longitude = point.getX();
-	}
 }

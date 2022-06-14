@@ -67,9 +67,7 @@ public class AccommodationService {
 
     private void validAccommodations(List<Accommodation> accommodations) {
         for (Accommodation accommodation : accommodations) {
-            if (accommodation.notExistsImage()) {
-                throw new IllegalStateException("숙소의 메인 이미지가 존재하지 않습니다");
-            }
+            accommodation.validAccommodation();
         }
     }
 

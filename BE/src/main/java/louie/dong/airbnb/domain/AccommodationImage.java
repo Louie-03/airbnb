@@ -27,5 +27,5 @@ public class AccommodationImage {
 	private String imageUrl;
 
 	@Enumerated(EnumType.STRING)
-	private ImageType imageType;
+	private boolean isThumbnailImage;
 }
