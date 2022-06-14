@@ -4,6 +4,7 @@ spring:
     url: jdbc:mysql://localhost:3306/airbnb
     username: loudong
     password: '0524'
+
   jpa:
     hibernate:
       ddl-auto: create
@@ -21,6 +22,27 @@ spring:
       encoding: UTF-8
       data-locations: classpath:dev/data.sql
 
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
 logging:
   level:
     org.hibernate.SQL: debug
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
+
+cloud:
+  aws:
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: issue-tracker-test
+    credentials:
+      access-key: AKIATFD7EYXESDS6NW5I
+      secret-key: 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
+    stack:
+      auto: false
